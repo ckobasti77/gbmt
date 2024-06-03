@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import { SwitchCamera } from 'lucide-react'
 
-const Switch = () => {
+const ScrollToTop = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -25,4 +25,4 @@ const Switch = () => {
   );
 };
 
-export default Switch;
+export default ScrollToTop;
