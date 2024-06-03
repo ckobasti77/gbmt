@@ -24,7 +24,7 @@ function App() {
           <Route path="/iskopi" index element={<Iskopi />} />
           <Route path="/kontakt" index element={<Kontakt />} />
         </Routes>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
       </Router>
     </>
   );
