@@ -1,17 +1,18 @@
 import gsap from "gsap";
-import { TextPlugin } from "gsap/all";
+import { TextPlugin, ScrollTrigger } from "gsap/all";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import Home from "./components/Home";
 import ScrollToTop from "./components/ScrollToTop";
-import Video from "./components/Video";
-import Iskopi from "./components/Iskopi";
-import Kontakt from "./components/Kontakt";
+import Video from "./pages/Video";
+import Iskopi from "./pages/Iskopi";
+import Kontakt from "./pages/Kontakt";
+import Home from "./pages/Home";
 
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 

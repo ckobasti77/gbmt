@@ -1,0 +1,70 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { TextPlugin } from "gsap/all";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import HomeFirst from "../components/Home/HomeFirst";
+import HomeSecond from "../components/Home/HomeSecond";
+import HomeThird from "../components/Home/HomeThird";
+
+gsap.registerPlugin(TextPlugin);
+
+const Home = () => {
+  useGSAP(() => {
+    gsap.to(".title", {
+      duration: 2,
+      text: "Nadgledanje i Zaštita <br className='hidden lg:block' /> Vaša Sigurnost na Prvom Mestu",
+      ease: "none",
+    });
+    gsap.to(".description", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: 2,
+    });
+    gsap.to(".cta", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: 2.5,
+    });
+
+    gsap.to(".video-iskopi-naslov", {
+      scrollTrigger: '.video-iskopi-slike',
+      y: 0,
+      opacity: 1,
+    })
+    gsap.to(".video-iskopi-slike", {
+      scrollTrigger: '.video-iskopi-slike',
+      y: 0,
+      opacity: 1,
+      delay: .5,
+    })
+    gsap.to(".video-iskopi-tekst", {
+      scrollTrigger: '.video-iskopi-slike',
+      y: 0,
+      opacity: 1,
+      delay: 1,
+    })
+    gsap.to(".video-iskopi-dugmad", {
+      scrollTrigger: '.video-iskopi-slike',
+      y: 0,
+      opacity: 1,
+      delay: 1.5,
+    })
+  }, []);
+
+  return (
+    <div className="overflow-x-hidden">
+      <div className="h-screen w-screen bg-[url(/./mobile-bg.png)] lg:bg-[url(/./cameras-edit.png)] bg-no-repeat bg-bottom bg-cover montserrat-font text-[#252525] overflow-hidden">
+        <Navbar />
+        <HomeFirst />
+      </div>
+      <HomeSecond />
+      <HomeThird />
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;

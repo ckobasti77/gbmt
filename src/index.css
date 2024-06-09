@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .montserrat-font {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -19,4 +23,8 @@
   backdrop-filter: blur( 20px );
   -webkit-backdrop-filter: blur( 20px );
   border-radius: 30px;
+}
+
+.bager, .camera {
+  filter: drop-shadow(29px 31px 10px rgba(0, 0, 0, .5));
 }
