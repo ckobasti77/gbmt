@@ -6,12 +6,12 @@ const HomeFirst = () => {
   return (
     <div className="flex flex-col items-center gap-y-6 px-6 lg:px-80 mt-8 ml-4">
       <h1 className="title mt-8 lg:mt-0 font-bold text-2xl lg:text-5xl text-center tracking-wider"></h1>
-      <h3 className="description opacity-0 translate-y-32 font-semibold text-md lg:text-lg text-blue-600 text-center">
+      <h3 className="description z-40 opacity-0 translate-y-32 font-semibold text-md lg:text-lg text-blue-600 text-center">
         Najbolje HD sigurnosne kamere, stručno instalirane i prilagođene vašim
         potrebama. <br /> Osigurajte svoj dom ili posao uz našu pouzdanu
         zaštitu.
       </h3>
-      <img src="/./single-camera.png" alt="camera" className="absolute -right-72 top-[480px] block lg:hidden" />
+      <img src="/./single-camera-1.png" alt="camera" className="absolute w-2/6 right-0 top-[480px] block lg:hidden overflow-hidden" />
       <div className="absolute bottom-1 ml-2.5 flex flex-col items-center justify-center">
         <Link
             to="/kontakt"

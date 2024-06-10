@@ -27,7 +27,7 @@ const HomeSecond = () => {
         </div>
         <div className="flex flex-col items-center w-full h-full py-12">
           <h2 className="video-iskopi-naslov translate-y-32 opacity-0 text-3xl font-bold">Iskopi</h2>
-          <img src="/./bager.png" alt="camera" className="w-4/12 video-iskopi-slike translate-y-32 opacity-0 ager" />
+          <img src="/./bager.png" alt="camera" className="w-4/12 video-iskopi-slike translate-y-32 opacity-0 bager" />
           <p className="px-6 lg:px-36 text-xl text-justify my-12 video-iskopi-tekst translate-y-32 opacity-0">
             Pored video nadzora, nudimo sve vrste iskopnih radova sa našom
             modernom flotom bagera. Bilo da se radi o građevinskim projektima,
