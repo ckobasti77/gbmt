@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const HomeFirst = () => {
   return (
     <div className="flex flex-col items-center gap-y-6 px-6 lg:px-80 mt-8 ml-4">
-      <h1 className="title mt-8 lg:mt-0 font-bold text-5xl text-center tracking-wider"></h1>
-      <h3 className="description opacity-0 translate-y-32 font-semibold text-lg text-blue-600 text-center">
+      <h1 className="title mt-8 lg:mt-0 font-bold text-2xl lg:text-5xl text-center tracking-wider"></h1>
+      <h3 className="description opacity-0 translate-y-32 font-semibold text-md lg:text-lg text-blue-600 text-center">
         Najbolje HD sigurnosne kamere, stručno instalirane i prilagođene vašim
         potrebama. <br /> Osigurajte svoj dom ili posao uz našu pouzdanu
         zaštitu.
