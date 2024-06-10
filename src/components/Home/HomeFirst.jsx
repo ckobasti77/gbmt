@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HomeFirst = () => {
   return (
     <div className="flex flex-col items-center gap-y-6 px-6 lg:px-80 mt-8 ml-4">
-      <h1 className="title mt-16 lg:mt-0 font-bold text-5xl text-center tracking-wider"></h1>
+      <h1 className="title mt-8 lg:mt-0 font-bold text-5xl text-center tracking-wider"></h1>
       <h3 className="description opacity-0 translate-y-32 font-semibold text-lg text-blue-600 text-center">
         Najbolje HD sigurnosne kamere, stručno instalirane i prilagođene vašim
         potrebama. <br /> Osigurajte svoj dom ili posao uz našu pouzdanu
@@ -20,7 +20,7 @@ const HomeFirst = () => {
             Kontakt{" "}
             <ChevronRight className="w-4 h-4 ml-2 group-hover:ml-4 transition-all text-white" />
         </Link>
-        <a href="#sekcija-dva">
+        <a href="#sekcija-dva" className="scroll-to opacity-0 translate-y-32">
             <ChevronDown className="h-12 w-12" />
             <ChevronDown className="h-12 w-12 -translate-y-9" />
         </a>

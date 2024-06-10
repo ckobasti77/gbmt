@@ -28,6 +28,12 @@ const Home = () => {
       duration: 1,
       delay: 2.5,
     });
+    gsap.to(".scroll-to", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: 3,
+    });
 
     gsap.to(".video-iskopi-naslov", {
       scrollTrigger: '.video-iskopi-slike',
