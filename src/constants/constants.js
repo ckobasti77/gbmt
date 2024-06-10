@@ -1,3 +1,5 @@
+import { Camera, Clock, Monitor, Ruler, Shield, Wrench } from "lucide-react";
+
 export const navLinks = [
   {
     id: 1,
@@ -49,3 +51,38 @@ export const iskopiTestimonials = [
     img: "/./avatar3.jpg",
   },
 ];
+
+export const iskopiCards = [
+  {
+    icon: Ruler,
+    title: 'Preciznost',
+    text: 'Naši iskopni radovi su izvedeni s visokim nivoom preciznosti. Koristimo naprednu tehnologiju i stručnost našeg tima kako bismo osigurali tačnost svakog iskopavanja, bez obzira na složenost i specifične zahteve projekta, omogućavajući precizno postavljanje temelja i infrastrukture.',
+  },
+  {
+    icon: Clock,
+    title: 'Efikasnost',
+    text: 'Efikasnost je ključni aspekt naših usluga. Naš tim je obučen da radi brzo i efektivno, koristeći najsavremeniju opremu. Time osiguravamo da svaki projekat bude završen u predviđenom roku, bez kompromisa na kvalitetu i bez nepotrebnih zastoja.',
+  },
+  {
+    icon: Shield,
+    title: 'Bezbednost',
+    text: 'Bezbednost je naš prioritet. Sprovodimo sve neophodne mere da osiguramo sigurno radno okruženje za naš tim i sve prisutne na gradilištu. Pridržavamo se najviših standarda sigurnosti kako bismo minimizirali rizike i osigurali uspešan završetak svakog projekta.',
+  },
+]
+export const videoCards = [
+  {
+    icon: Camera,
+    title: 'Instalacija',
+    text: 'Naš tim stručnjaka osigurava brzu i efikasnu instalaciju sistema video nadzora. Bez obzira na veličinu i složenost objekta, prilagođavamo se vašim specifičnim potrebama i zahtevima, garantujući maksimalnu pokrivenost i optimalno pozicioniranje kamera za potpunu sigurnost.',
+  },
+  {
+    icon: Monitor,
+    title: 'Praćenje',
+    text: 'Naši sistemi omogućavaju 24/7 praćenje vašeg prostora. Sa mogućnošću daljinskog pristupa putem mobilnih uređaja, možete pratiti dešavanja u realnom vremenu, bilo kada i bilo gde. Naša rešenja pružaju sigurnost i mir u svakom trenutku.',
+  },
+  {
+    icon: Wrench,
+    title: 'Održavanje',
+    text: 'Redovno održavanje vašeg sistema video nadzora je ključno za njegovo besprekorno funkcionisanje. Nudimo kompletnu podršku i brzu reakciju na sve kvarove i potrebe za prilagođavanjem sistema, osiguravajući dugotrajnu i pouzdanu zaštitu vašeg prostora.',
+  },
+]

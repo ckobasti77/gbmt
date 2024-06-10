@@ -62,7 +62,7 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <div className="h-screen w-screen bg-[url(/./mobile-bg.png)] lg:bg-[url(/./cameras-edit.png)] bg-no-repeat bg-bottom bg-cover montserrat-font text-[#252525] overflow-hidden">
+      <div className="h-screen w-screen bg-[url(/./mobile-bg.png)] lg:bg-[url(/./download.png)] bg-no-repeat bg-bottom bg-cover text-[#252525] overflow-hidden">
         <Navbar />
         <HomeFirst />
       </div>

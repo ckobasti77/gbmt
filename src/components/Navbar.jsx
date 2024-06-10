@@ -22,16 +22,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <ul className={`w-full py-6 px-6 lg:px-48 flex items-center justify-between text-lg sticky top-0`}>
+    <ul className={`w-full py-6 px-6 lg:px-48 flex items-center justify-between text-lg z-[999999]`}>
       <Link to='/' className="link text-5xl -translate-y-96 opacity-0 cursor-pointer font-bold tracking-widest text-blue-800">
         GBMT
       </Link>
-      <Menu className="w-8 h-8 block lg:hidden" onClick={() => setShowMobileNav(!showMobileNav)} />
-      <div className={`py-8 lg:py-0 rounded-b-xl z-50 lg:rounded-b-none ${currentPath === '/kontakt' || currentPath === '/video-nadzor' ? 'bg-[url(/./mobile-bg-2.png)]' : 'bg-[url(/./mobile-bg.png)]'} lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 absolute lg:static ${showMobileNav ? 'top-20' : '-top-80'} transition-all left-0 right-0 gap-y-8`}>
+      <Menu className="w-10 h-10 block lg:hidden" onClick={() => setShowMobileNav(!showMobileNav)} />
+      <div className={`border-b-4 border-blue-600 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl lg:rounded-b-none ${currentPath === '/kontakt' || currentPath === '/video-nadzor' ? 'bg-[url(/./mobile-bg-2.png)]' : 'bg-[url(/./mobile-bg.png)]'} lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${showMobileNav ? 'top-20' : '-top-96'} transition-all left-0 right-0 gap-y-8`}>
         {navLinks.map((link) => (
-          <Link onClick={() => setShowMobileNav(false)} key={link.id} to={link.to} className={`link -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? 'text-blue-600' : ''}`}>{link.text}</Link>
+          <Link onClick={() => setShowMobileNav(false)} key={link.id} to={link.to} className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? 'text-blue-600' : ''}`}>{link.text}</Link>
         ))}
-        <a href="email:johndoe@gmail.com" className="link h-12 w-12 bg-green-600 rounded-full grid place-items-center text-white">
+        <a href="tel:+381641234567" className="link -translate-y-96 opacity-0 h-12 w-12 bg-green-600 rounded-full grid place-items-center text-white">
           <PhoneCallIcon />
         </a>
       </div>

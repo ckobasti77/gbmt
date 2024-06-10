@@ -17,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
 
   return (
-    <>
+    <div className="montserrat-font">
       <Router>
         <Routes>
           <Route path="/" index element={<Home />} />
@@ -27,7 +27,7 @@ function App() {
         </Routes>
         {/* <ScrollToTop /> */}
       </Router>
-    </>
+    </div>
   );
 }
 
