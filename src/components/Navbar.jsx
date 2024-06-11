@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../constants/constants";
 import { Menu, PhoneCallIcon } from "lucide-react";
+import { scrollToTop } from "./ScrollToTop";
+import Burger from "./Burger";
 
 const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
-
-  const [showMobileNav, setShowMobileNav] = useState(false)
 
   useGSAP(() => {
     gsap.to(".link", {
@@ -21,17 +21,59 @@ const Navbar = () => {
     });
   }, []);
 
+  const [showNav, setShowNav] = useState(true);
+  const [navOpen, setNavOpen] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const visible = scrollPos > currentScrollPos;
+      setScrollPos(currentScrollPos);
+      setShowNav(visible);
+      setNavOpen(false);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [scrollPos]);
+
+  const toggleNav = useCallback(() => {
+    setNavOpen((prev) => !prev);
+  }, []);
+
   return (
-    <ul className={`w-full py-6 px-6 lg:px-48 flex items-center justify-between text-lg z-[999999]`}>
-      <Link to='/' className="link text-5xl -translate-y-96 opacity-0 cursor-pointer font-bold tracking-widest text-blue-800">
+    <ul
+      className={`fixed w-full py-6 px-6 lg:px-48 flex items-center justify-between text-lg z-[999999] transition-all lg:hover:backdrop-blur-lg ${
+        showNav ? "transform-none " : "transform -translate-y-full"
+      }`}
+    >
+      <Link
+        to="/"
+        className="link text-5xl -translate-y-96 opacity-0 cursor-pointer font-bold tracking-widest text-blue-800"
+      >
         GBMT
       </Link>
-      <Menu className="w-10 h-10 block lg:hidden" onClick={() => setShowMobileNav(!showMobileNav)} />
-      <div className={`border-b-4 border-blue-600 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl lg:rounded-b-none ${currentPath === '/kontakt' || currentPath === '/video-nadzor' ? 'bg-[url(/./mobile-bg-2.png)]' : 'bg-[url(/./mobile-bg.png)]'} lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${showMobileNav ? 'top-20' : '-top-96'} transition-all left-0 right-0 gap-y-8`}>
+      <Burger navOpen={navOpen} toggleNav={toggleNav} />
+      <div
+        className={`border-b-4 border-blue-600 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl  lg:rounded-b-none backdrop-blur-lg lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${navOpen ? "top-20" : "-top-96"} transition-all left-0 right-0 gap-y-8`}
+      >
         {navLinks.map((link) => (
-          <Link onClick={() => setShowMobileNav(false)} key={link.id} to={link.to} className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? 'text-blue-600' : ''}`}>{link.text}</Link>
+          <Link
+            onClick={() => {
+              setNavOpen(false);
+              scrollToTop();
+            }}
+            key={link.id}
+            to={link.to}
+            className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? "text-blue-600" : ""}`}
+          >
+            {link.text}
+          </Link>
         ))}
-        <a href="tel:+381641234567" className="link -translate-y-96 opacity-0 h-12 w-12 bg-green-600 rounded-full grid place-items-center text-white">
+        <a
+          href="tel:+381641234567"
+          className="link -translate-y-96 opacity-0 h-12 w-12 bg-green-600 rounded-full grid place-items-center text-white"
+        >
           <PhoneCallIcon />
         </a>
       </div>

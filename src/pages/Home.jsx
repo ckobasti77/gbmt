@@ -36,39 +36,35 @@ const Home = () => {
     });
 
     gsap.to(".video-iskopi-naslov", {
-      scrollTrigger: '.video-iskopi-slike',
+      scrollTrigger: ".video-iskopi-slike",
       y: 0,
       opacity: 1,
-    })
+    });
     gsap.to(".video-iskopi-slike", {
-      scrollTrigger: '.video-iskopi-slike',
+      scrollTrigger: ".video-iskopi-slike",
       y: 0,
       opacity: 1,
-      delay: .5,
-    })
+      delay: 0.5,
+    });
     gsap.to(".video-iskopi-tekst", {
-      scrollTrigger: '.video-iskopi-slike',
+      scrollTrigger: ".video-iskopi-slike",
       y: 0,
       opacity: 1,
       delay: 1,
-    })
+    });
     gsap.to(".video-iskopi-dugmad", {
-      scrollTrigger: '.video-iskopi-slike',
+      scrollTrigger: ".video-iskopi-slike",
       y: 0,
       opacity: 1,
       delay: 1.5,
-    })
+    });
   }, []);
 
   return (
     <div className="overflow-x-hidden">
-      <div className="h-screen w-screen bg-[url(/./mobile-bg.png)] lg:bg-[url(/./download.png)] bg-no-repeat bg-bottom bg-cover text-[#252525] overflow-hidden">
-        <Navbar />
-        <HomeFirst />
-      </div>
+      <HomeFirst />
       <HomeSecond />
       <HomeThird />
-      <Footer />
     </div>
   );
 };
