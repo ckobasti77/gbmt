@@ -43,19 +43,19 @@ const Navbar = () => {
 
   return (
     <ul
-      className={`fixed w-full py-6 px-6 lg:px-48 flex items-center justify-between text-lg z-[999999] transition-all lg:hover:backdrop-blur-lg ${
+      className={`fixed top-0 w-full py-6 px-6 lg:px-48 flex items-center justify-between text-lg z-[999999] transition-all lg:hover:backdrop-blur-lg ${
         showNav ? "transform-none " : "transform -translate-y-full"
       }`}
     >
       <Link
         to="/"
-        className="link text-5xl -translate-y-96 opacity-0 cursor-pointer font-bold tracking-widest text-blue-800"
+        className="link text-5xl -translate-y-96 opacity-0 cursor-pointer font-bold tracking-widest text-blue-500"
       >
         GBMT
       </Link>
       <Burger navOpen={navOpen} toggleNav={toggleNav} />
       <div
-        className={`border-b-4 border-blue-600 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl  lg:rounded-b-none backdrop-blur-lg lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${navOpen ? "top-20" : "-top-96"} transition-all left-0 right-0 gap-y-8`}
+        className={`border-b-4 border-blue-600 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl  lg:rounded-b-none backdrop-blur-lg lg:backdrop-blur-none lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${navOpen ? "top-20" : "-top-96"} transition-all left-0 right-0 gap-y-8`}
       >
         {navLinks.map((link) => (
           <Link
@@ -65,7 +65,7 @@ const Navbar = () => {
             }}
             key={link.id}
             to={link.to}
-            className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? "text-blue-600" : ""}`}
+            className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? "text-blue-600" : "text-white"}`}
           >
             {link.text}
           </Link>

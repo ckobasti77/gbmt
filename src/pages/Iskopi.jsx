@@ -8,7 +8,6 @@ const Iskopi = () => {
     <div className="overflow-x-hidden">
       <IskopiFirst />
       <IskopiSecond />
-      <Footer />
     </div>
   );
 };

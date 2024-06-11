@@ -31,7 +31,7 @@ const HomeSecond = () => {
     })
   }, []);
   return (
-    <div id="sekcija-dva" className="min-h-screen w-screen bg-[url(/./mobile-bg-2.png)] lg:bg-[url(/./background.png)] bg-no-repeat bg-bottom bg-cover flex flex-col lg:flex-row items-center justify-between">
+    <div id="sekcija-dva" className="min-h-screen w-screen bg-[url(/./mobile-bg-2.png)] lg:bg-[url(/./new-bg-mirror.png)] bg-no-repeat bg-bottom bg-cover flex flex-col lg:flex-row items-center justify-between">
         <div className="flex flex-col items-center w-full h-full py-6">
           <h2 className="video-iskopi-naslov translate-y-32 opacity-0 text-3xl font-bold">Video nadzor</h2>
           <img src="/./single-camera.png" alt="camera" className="video-iskopi-slike translate-y-32 opacity-0 w-2/6 camera" />

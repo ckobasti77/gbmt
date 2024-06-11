@@ -8,7 +8,6 @@ const Video = () => {
     <div className="overflow-x-hidden">
       <VideoFirst />
       <VideoSecond />
-      <Footer />
     </div>
   )
 }

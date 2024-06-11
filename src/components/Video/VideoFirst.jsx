@@ -14,7 +14,7 @@ const VideoFirst = () => {
     });
   }, []);
   return (
-    <div className="min-h-screen w-screen bg-[url(/./mobile-bg-2.png)] lg:bg-[url(/./background.png)] bg-no-repeat bg-bottom bg-cover">
+    <div className="min-h-screen w-screen bg-[url(/./mobile-bg-2.png)] lg:bg-[url(/./background.png)] bg-no-repeat bg-bottom bg-cover pt-24">
       <Navbar />
       <div className="flex flex-col-reverse lg:flex-row px-6 lg:px-48">
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-y-8">

@@ -14,8 +14,7 @@ const IskopiFirst = () => {
     });
   }, []);
   return (
-    <div className="min-h-screen w-screen bg-[url(/./mobile-bg.png)] lg:bg-[url(/./background.png)] bg-no-repeat bg-bottom bg-cover">
-      <Navbar />
+    <div className="min-h-screen w-screen bg-[url(/./mobile-bg.png)] lg:bg-[url(/./background.png)] bg-no-repeat bg-bottom bg-cover pt-24">
       <div className="flex flex-col-reverse lg:flex-row px-6 lg:px-48">
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-y-8">
           <h1 className="video-hero-elements opacity-0 translate-y-32 text-4xl font-medium">

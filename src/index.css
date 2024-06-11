@@ -28,3 +28,8 @@ html {
 .bager, .camera {
   filter: drop-shadow(29px 31px 10px rgba(0, 0, 0, .5));
 }
+
+.overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 31,1) 0%, rgba(0, 0, 31,0) 50%, rgba(0, 0, 31,1) 100%), radial-gradient(circle, rgba(0, 0, 31,0) 0%, rgba(0, 0, 31,.5) 100%);
+}
+
