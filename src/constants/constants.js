@@ -1,4 +1,4 @@
-import { Camera, Clock, Monitor, Ruler, Shield, Wrench } from "lucide-react";
+import { Camera, Clock, Layers, Link, Monitor, Ruler, Shield, Wrench } from "lucide-react";
 
 export const navLinks = [
   {
@@ -63,12 +63,21 @@ export const iskopiCards = [
     title: 'Efikasnost',
     text: 'Efikasnost je ključni aspekt naših usluga. Naš tim je obučen da radi brzo i efektivno, koristeći najsavremeniju opremu. Time osiguravamo da svaki projekat bude završen u predviđenom roku, bez kompromisa na kvalitetu i bez nepotrebnih zastoja.',
   },
+]
+
+export const iskopiCards2 = [
   {
     icon: Shield,
     title: 'Bezbednost',
     text: 'Bezbednost je naš prioritet. Sprovodimo sve neophodne mere da osiguramo sigurno radno okruženje za naš tim i sve prisutne na gradilištu. Pridržavamo se najviših standarda sigurnosti kako bismo minimizirali rizike i osigurali uspešan završetak svakog projekta.',
   },
+  {
+    icon: Layers,
+    title: 'Fleksibilnost',
+    text: 'Naši iskopni radovi su prilagodljivi i fleksibilni, osiguravajući da možemo da odgovorimo na sve specifične zahteve vašeg projekta. Bilo da se radi o malim ili velikim iskopima, naš tim je spreman da se prilagodi vašim potrebama, garantujući optimalne rezultate u svakoj situaciji.',
+  },
 ]
+
 export const videoCards = [
   {
     icon: Camera,
@@ -80,9 +89,17 @@ export const videoCards = [
     title: 'Praćenje',
     text: 'Naši sistemi omogućavaju 24/7 praćenje vašeg prostora. Sa mogućnošću daljinskog pristupa putem mobilnih uređaja, možete pratiti dešavanja u realnom vremenu, bilo kada i bilo gde. Naša rešenja pružaju sigurnost i mir u svakom trenutku.',
   },
+]
+
+export const videoCards2 = [
   {
     icon: Wrench,
     title: 'Održavanje',
     text: 'Redovno održavanje vašeg sistema video nadzora je ključno za njegovo besprekorno funkcionisanje. Nudimo kompletnu podršku i brzu reakciju na sve kvarove i potrebe za prilagođavanjem sistema, osiguravajući dugotrajnu i pouzdanu zaštitu vašeg prostora.',
+  },
+  {
+    icon: Link,
+    title: 'Integracija',
+    text: 'Naši sistemi video nadzora lako se integrišu sa postojećom sigurnosnom infrastrukturom. Bilo da se radi o alarmima, kontroli pristupa ili pametnim kućnim sistemima, naši stručnjaci će osigurati besprekornu integraciju koja poboljšava ukupnu sigurnost i funkcionalnost vašeg objekta.',
   },
 ]

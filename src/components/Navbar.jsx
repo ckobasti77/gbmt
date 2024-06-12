@@ -55,7 +55,7 @@ const Navbar = () => {
       </Link>
       <Burger navOpen={navOpen} toggleNav={toggleNav} />
       <div
-        className={`border-b-4 border-blue-600 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl  lg:rounded-b-none backdrop-blur-lg lg:backdrop-blur-none lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${navOpen ? "top-20" : "-top-96"} transition-all left-0 right-0 gap-y-8`}
+        className={`border-b-4 border-blue-500 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl  lg:rounded-b-none backdrop-blur-lg lg:backdrop-blur-none lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${navOpen ? "top-20" : "-top-96"} transition-all left-0 right-0 gap-y-8`}
       >
         {navLinks.map((link) => (
           <Link
@@ -65,7 +65,8 @@ const Navbar = () => {
             }}
             key={link.id}
             to={link.to}
-            className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? "text-blue-600" : "text-white"}`}
+            className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? "text-blue-500" : "text-white"}`}
+            style={{textShadow: currentPath === link.to ? "1px 1px 10px #000" : ''}}
           >
             {link.text}
           </Link>
