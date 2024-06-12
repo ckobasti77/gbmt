@@ -31,24 +31,21 @@ const HomeFirst = () => {
     });
   }, []);
   return (
-    <div className="h-screen w-screen bg-[url(/./mobile-bg.png)] lg:bg-[url(/./new-bg.jpg)] bg-no-repeat bg-top bg-cover text-[#fff] overflow-hidden">
+    <div className="h-screen w-screen bg-[url(/./new-bg.jpg)] bg-no-repeat bg-left lg:bg-top bg-cover text-white overflow-hidden">
       <div className="overlay h-full w-full bg-opacity-20">
         <div className="flex flex-col items-center gap-y-6 px-6 lg:px-80 pt-28 ml-4">
-          <h1 className="title  lg:mt-0 font-bold text-2xl lg:text-5xl text-center tracking-wider"></h1>
-          <h3
-            style={{ textShadow: "1px 1px 3px black" }}
-            className="description drop-shadow-2xl z-40 opacity-0 translate-y-32 font-extrabold tracking-wide text-md lg:text-lg text-blue-600 text-center"
-          >
+          <h1 className="title text-gradient lg:mt-0 font-bold text-2xl lg:text-5xl text-center tracking-wider"></h1>
+          <h3 className="description z-40 opacity-0 translate-y-32 font-extrabold tracking-wide text-md lg:text-lg text-center">
             Najbolje HD sigurnosne kamere, stručno instalirane i prilagođene
             vašim potrebama. <br /> Osigurajte svoj dom ili posao uz našu
             pouzdanu zaštitu.
           </h3>
-          <img
+          {/* <img
             src="/./single-camera-1.png"
             alt="camera"
             className="absolute w-2/6 right-0 top-[440px] block lg:hidden overflow-hidden"
-          />
-          <div className="absolute bottom-1 ml-2.5 flex flex-col items-center justify-center">
+          /> */}
+          <div className="absolute -bottom-10 ml-2.5 flex flex-col items-center justify-center">
             <Link
               to="/kontakt"
               className="group cta opacity-0 translate-y-32 px-6 py-2 rounded-full bg-blue-600 text-white flex items-center justify-center"

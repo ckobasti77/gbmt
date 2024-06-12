@@ -28,8 +28,9 @@ const HomeThird = () => {
     })
   }, []);
   return (
-    <div className="py-6 lg:py-0 w-screen bg-[url(/./mobile-bg.png)] lg:bg-[url(/./background.png)] bg-no-repeat bg-bottom bg-cover overflow-hidden">
-      <h2 className="home-3-title text-3xl text-center font-semibold mb-8 translate-y-32 opacity-0">Recenzije</h2>
+    <div className="py-6 lg:py-0 w-screen bg-[url(/./new-bg-2.png)] bg-no-repeat bg-left lg:bg-top bg-cover overflow-hidden text-white">
+      
+      <h2 className="text-gradient home-3-title text-3xl text-center font-semibold mb-8 translate-y-32 opacity-0">Recenzije</h2>
       <div className="flex flex-col lg:flex-row items-center justify-between">
         <div className="flex flex-col items-center gap-y-16 w-full h-full py-12">
           {videoTestimonials.map((single) => (
