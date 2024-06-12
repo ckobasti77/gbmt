@@ -34,30 +34,6 @@ const Home = () => {
       duration: 1,
       delay: 3,
     });
-
-    gsap.to(".video-iskopi-naslov", {
-      scrollTrigger: ".video-iskopi-slike",
-      y: 0,
-      opacity: 1,
-    });
-    gsap.to(".video-iskopi-slike", {
-      scrollTrigger: ".video-iskopi-slike",
-      y: 0,
-      opacity: 1,
-      delay: 0.5,
-    });
-    gsap.to(".video-iskopi-tekst", {
-      scrollTrigger: ".video-iskopi-slike",
-      y: 0,
-      opacity: 1,
-      delay: 1,
-    });
-    gsap.to(".video-iskopi-dugmad", {
-      scrollTrigger: ".video-iskopi-slike",
-      y: 0,
-      opacity: 1,
-      delay: 1.5,
-    });
   }, []);
 
   return (

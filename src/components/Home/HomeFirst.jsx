@@ -46,7 +46,7 @@ const HomeFirst = () => {
             alt="camera"
             className="absolute w-2/6 right-0 top-[440px] block lg:hidden overflow-hidden"
           /> */}
-          <div className="absolute left-0 right-0 -bottom-10 ml-2.5 flex flex-col items-center justify-center">
+          <div className="absolute left-0 right-0 -bottom-5 ml-2.5 flex flex-col items-center justify-center">
             <Button to="/kontakt" text="Kontakt" className="cta" />
             <a
               href="#sekcija-dva"
