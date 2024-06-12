@@ -5,11 +5,11 @@ import Footer from './Footer'
 
 const SharedLayout = () => {
   return (
-    <>
+    <div className='relative overflow-hidden'>
         <Navbar />
         <Outlet />
         <Footer />
-    </>
+    </div>
   )
 }
 
