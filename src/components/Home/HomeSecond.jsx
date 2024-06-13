@@ -27,7 +27,7 @@ const HomeSecond = () => {
     >
       <div className="overlay min-h-screen w-full bg-opacity-20 flex flex-col lg:flex-row items-center justify-between">
         <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="w-full bg-[url(/./new-bg-mirror.avif)] bg-no-repeat bg-left lg:bg-top bg-cover lg:bg-none h-screen lg:h-full">
-          <div className="overlay h-full lg:bg-none flex flex-col items-center justify-between py-28 lg:py-0">
+          <div className="overlay h-full lg:bg-none flex flex-col items-center justify-between py-16 lg:py-0">
             <h2 className="text-gradient video-stagger translate-y-32 opacity-0 text-3xl font-bold">
               Video nadzor
             </h2>
@@ -49,7 +49,7 @@ const HomeSecond = () => {
           </div>
         </div>
         <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="w-full bg-[url(/./new-bg-2.avif)] bg-no-repeat bg-left lg:bg-top bg-cover lg:bg-none h-screen lg:h-full">
-          <div className="overlay h-full lg:bg-none flex flex-col items-center justify-between py-28 lg:py-0">
+          <div className="overlay h-full lg:bg-none flex flex-col items-center justify-between py-16 lg:py-0">
             <h2 className="text-gradient iskopi-stagger translate-y-32 opacity-0 text-3xl font-bold">
               Iskopi
             </h2>
