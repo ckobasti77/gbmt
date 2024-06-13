@@ -23,22 +23,22 @@ const HomeSecond = () => {
   return (
     <div
       id="sekcija-dva"
-      className="min-h-screen w-screen bg-[url(/./new-bg-mirror.png)] bg-no-repeat bg-left lg:bg-bottom bg-cover size text-white"
+      className="min-h-screen w-screen bg-[url(/./new-bg-mirror.avif)] bg-no-repeat bg-left lg:bg-bottom bg-cover size text-white"
     >
       <div className="overlay min-h-screen w-full bg-opacity-20 flex flex-col lg:flex-row items-center justify-between">
-        <div className="w-full bg-[url(/./new-bg-mirror.png)] bg-no-repeat bg-left lg:bg-top bg-cover lg:bg-none h-screen lg:h-full">
+        <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="w-full bg-[url(/./new-bg-mirror.avif)] bg-no-repeat bg-left lg:bg-top bg-cover lg:bg-none h-screen lg:h-full">
           <div className="overlay h-full lg:bg-none flex flex-col items-center justify-between py-28 lg:py-0">
             <h2 className="text-gradient video-stagger translate-y-32 opacity-0 text-3xl font-bold">
               Video nadzor
             </h2>
             <img
-              src="/./single-camera.png"
+              src="/./single-camera.avif"
               alt="camera"
-              className="video-stagger video-slika translate-y-32 opacity-0 w-2/6 camera"
+              className="video-stagger video-slika translate-y-32 opacity-0 w-4/6 lg:w-1/4 camera"
             />
-            <p className="px-6 lg:px-36 text-lg text-justify my-12 video-stagger translate-y-32 opacity-0">
+            <p style={{ textShadow: '1px 1px 7.5px #000' }} className="px-6 lg:px-48 text-lg text-justify my-12 video-stagger translate-y-32 opacity-0">
               Dobrodošli u{" "}
-              <span className="font-bold text-gradient">Global Beo Mobil Trend</span>, vašeg
+              <span style={{ textShadow: 'none' }} className="font-bold text-gradient">Global Beo Mobil Trend</span>, vašeg
               pouzdanog partnera za sve potrebe video nadzora. Specijalizovani
               smo za ugradnju i održavanje najsavremenijih sistema video
               nadzora, pružajući vam sigurnost i mir. Naš tim stručnjaka koristi
@@ -48,17 +48,17 @@ const HomeSecond = () => {
             <Button to='/video-nadzor' text="Saznaj Više" className='video-stagger' />
           </div>
         </div>
-        <div className="w-full bg-[url(/./new-bg-2.png)] bg-no-repeat bg-left lg:bg-top bg-cover lg:bg-none h-screen lg:h-full">
+        <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="w-full bg-[url(/./new-bg-2.avif)] bg-no-repeat bg-left lg:bg-top bg-cover lg:bg-none h-screen lg:h-full">
           <div className="overlay h-full lg:bg-none flex flex-col items-center justify-between py-28 lg:py-0">
             <h2 className="text-gradient iskopi-stagger translate-y-32 opacity-0 text-3xl font-bold">
               Iskopi
             </h2>
             <img
-              src="/./bager.png"
+              src="/./bager.avif"
               alt="camera"
-              className="w-2/6 iskopi-stagger iskopi-slika translate-y-32 opacity-0 bager"
+              className="w-4/6 lg:w-1/4 iskopi-stagger iskopi-slika translate-y-32 opacity-0 bager"
             />
-            <p className="px-6 lg:px-36 text-lg text-justify my-12 iskopi-stagger translate-y-32 opacity-0">
+            <p style={{ textShadow: '1px 1px 7.5px #000' }} className="px-6 lg:px-48 text-lg text-justify my-12 iskopi-stagger translate-y-32 opacity-0">
               Pored video nadzora, nudimo sve vrste iskopnih radova sa našom
               modernom flotom bagera. Bilo da se radi o građevinskim projektima,
               uređenju terena ili drugim vrstama iskopavanja, naši iskusni

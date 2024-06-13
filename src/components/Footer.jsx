@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <div
-      className={`w-screen overflow-hidden absolute bottom-0 left-0 right-0 flex justify-center py-4 border-t-4 border-blue-500 text-xs lg:text-xl text-nowrap bg-no-repeat bg-transparent bg-cover text-white`}
+      className={`w-screen overflow-hidden absolute bottom-0 left-0 right-0 flex justify-center py-4 border-t-2 border-blue-500 text-xs lg:text-xl text-nowrap bg-no-repeat bg-transparent bg-cover text-white`}
     >
       Copyright © {currentYear}
       <span className="text-gradient ml-1 font-bold">

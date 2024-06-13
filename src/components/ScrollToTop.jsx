@@ -33,7 +33,7 @@ const ScrollToTop = () => {
   return (
   
       <button
-        className={`fixed backdrop-blur-2xl transition-all bottom-14 lg:bottom-16 rounded-full text-white border-4 border-blue-600 w-14 h-14 grid place-items-center ${
+        className={`fixed backdrop-blur-2xl transition-all bottom-14 lg:bottom-16 rounded-full text-white border-2 border-blue-500 w-14 h-14 grid place-items-center ${
           showScrollToTop
             ? "right-6 scale-100 opacity-100"
             : "-right-6 scale-0 opacity-0"

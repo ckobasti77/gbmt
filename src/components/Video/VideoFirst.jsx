@@ -15,7 +15,7 @@ const VideoFirst = () => {
     });
   }, []);
   return (
-    <div className="min-h-screen w-screen bg-[url(/./new-bg-2.png)] bg-no-repeat bg-left lg:bg-top bg-cover text-white">
+    <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="min-h-screen w-screen bg-[url(/./new-bg-2.avif)] bg-no-repeat bg-left lg:bg-top bg-cover text-white">
       <div className="overlay pt-24 min-h-screen">
         <div className="flex  lg:flex-row px-6 lg:px-48">
           <div className="w-full lg:w-1/2 flex flex-col justify-center items-center gap-y-8">
@@ -29,7 +29,7 @@ const VideoFirst = () => {
               zaštitu 24/7.
             </h3>
             <img
-              src="/./single-camera.png"
+              src="/./single-camera.avif"
               alt="camera"
               className="video-hero-elements block lg:hidden opacity-0 translate-y-32 w-5/6"
             />
@@ -41,7 +41,7 @@ const VideoFirst = () => {
           </div>
           <div className="w-full lg:w-1/2 h-full hidden lg:flex items-center justify-center lg:justify-end">
             <img
-              src="/./single-camera.png"
+              src="/./single-camera.avif"
               alt="camera"
               className="video-hero-elements opacity-0 translate-y-32 w-5/6"
             />

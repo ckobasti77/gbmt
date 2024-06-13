@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Mail, PhoneCallIcon } from "lucide-react";
-import Navbar from "../components/Navbar";
+import React, { useRef, useState } from "react";
+import { PhoneCallIcon } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -65,8 +64,8 @@ const Kontakt = () => {
   });
 
   return (
-    <div className="min-h-screen overflow-y-hidden w-screen bg-[url(/./new-bg.jpg)] bg-no-repeat bg-left lg:bg-top bg-cover text-white">
-      <div className="overlay py-20 min-h-screen flex flex-col justify-center">
+    <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="min-h-screen overflow-y-hidden w-screen bg-[url(/./new-bg.avif)] bg-no-repeat bg-left lg:bg-top bg-cover text-white">
+      <div className="overlay py-16 min-h-screen flex flex-col justify-center">
         <h1 className="kontakt-stagger text-2xl lg:text-5xl text-center font-semibold mt-4 text-gradient">
           Zakažite Konsultacije
         </h1>
@@ -119,14 +118,14 @@ const Kontakt = () => {
             <div className="flex flex-col">
               <label
                 htmlFor="message"
-                className="font-bold flex items-center kontakt-stagger opacity-0 translate-y-32"
+                className="mb-1 font-bold flex items-center kontakt-stagger opacity-0 translate-y-32"
               >
                 Poruka (ili nas odmah pozovite{" "}
                 <a
                   href="tel:+381641234567"
-                  className="h-12 w-12 mx-1 bg-green-600 rounded-full inline-grid place-items-center text-white"
+                  className="h-8 w-8 mx-1 bg-green-600 rounded-full inline-grid place-items-center text-white"
                 >
-                  <PhoneCallIcon />
+                  <PhoneCallIcon className="w-4 h-4" />
                 </a>
                 ) :
               </label>

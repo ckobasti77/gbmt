@@ -28,14 +28,14 @@ const HomeThird = () => {
     });
   }, []);
   return (
-    <div className="w-screen bg-[url(/./new-bg-2.png)] bg-no-repeat bg-left lg:bg-top bg-cover overflow-hidden text-white">
+    <div className="w-screen bg-[url(/./new-bg-2.avif)] bg-no-repeat bg-left lg:bg-top bg-cover overflow-hidden text-white">
       <div className="overlay min-h-screen pb-12">
         <h2 className="text-gradient hidden lg:block home-3-title text-3xl text-center font-semibold pb-8 translate-y-32 opacity-0">
           Recenzije
         </h2>
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="bg-[url(/./new-bg-mirror.png)] lg:bg-none bg-no-repeat bg-cover bg-left flex flex-col items-center gap-y-16 w-full h-screen">
-            <div className="overlay lg:bg-none flex flex-col items-center justify-between gap-y-16 py-12 h-full">
+          <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="bg-[url(/./new-bg-mirror.avif)] lg:bg-none bg-no-repeat bg-cover bg-left flex flex-col items-center gap-y-16 w-full h-screen">
+            <div className="overlay lg:bg-none flex flex-col items-center justify-between gap-y-12 py-12 h-full">
               <h2 className="text-gradient block lg:hidden home-3-title text-3xl text-center font-semibold pb-8 translate-y-32 opacity-0">
                 Recenzije
               </h2>
@@ -55,14 +55,14 @@ const HomeThird = () => {
                   <span className="text-md font-black tracking-wider text-gradient translate-y-32 opacity-0 recenzije-stagger-video">
                     {single.position}
                   </span>
-                  <p className="mt-4 translate-y-32 opacity-0 recenzije-stagger-video">
+                  <p className="mt-4 min-h-36 translate-y-32 opacity-0 recenzije-stagger-video">
                     {single.text}
                   </p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="bg-[url(/./new-bg-2.png)] bg-no-repeat bg-cover bg-left lg:bg-none flex flex-col items-center gap-y-16 w-full h-screen">
+          <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="bg-[url(/./new-bg-2.avif)] bg-no-repeat bg-cover bg-left lg:bg-none flex flex-col items-center gap-y-16 w-full h-screen">
             <div className="overlay lg:bg-none flex flex-col items-center justify-between gap-y-16 py-36 lg:py-12 h-full">
               {iskopiTestimonials.map((single) => (
                 <div
@@ -80,7 +80,7 @@ const HomeThird = () => {
                   <span className="text-md font-black tracking-wider text-gradient translate-y-32 opacity-0 recenzije-stagger-iskopi">
                     {single.position}
                   </span>
-                  <p className="mt-4 translate-y-32 opacity-0 recenzije-stagger-iskopi">
+                  <p className="mt-4 min-h-36 flex items-center translate-y-32 opacity-0 recenzije-stagger-iskopi">
                     {single.text}
                   </p>
                 </div>

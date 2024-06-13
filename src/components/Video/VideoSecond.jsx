@@ -3,42 +3,42 @@ import { videoCards, videoCards2 } from "../../constants/constants";
 
 const VideoSecond = () => {
   return (
-    <div className="overflow-hidden text-white w-screen  bg-[url(/./new-bg-mirror.png)] bg-no-repeat bg-left lg:bg-top bg-cover">
-      <div className="overlay flex flex-col lg:flex-row justify-center items-center">
-        <div className="bg-[url(/./new-bg-mirror.png)] w-full lg:w-1/2 h-screen lg:bg-none bg-cover bg-left bg-no-repeat">
-          <div className="overlay h-screen lg:bg-none flex flex-col lg:flex-row items-center gap-y-8 px-6 lg:px-0 py-6 lg:py-0">
+    <div className="overflow-y-hidden min-h-screen text-white w-screen  bg-[url(/./new-bg-mirror.avif)] bg-no-repeat bg-left lg:bg-bottom bg-cover">
+      <div className="overlay flex flex-col lg:flex-row justify-center items-center pb-24">
+        <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="bg-[url(/./new-bg-mirror.avif)] w-full lg:w-1/2 h-screen lg:bg-none bg-cover bg-left bg-no-repeat">
+          <div className="overlay h-screen lg:bg-none flex flex-col items-center justify-center gap-y-12 px-6 lg:px-0 py-6 lg:py-0 mb-12">
             {videoCards.map((video, i) => (
               <div
                 key={i}
-                className="w-full lg:w-1/2 lg:mx-4 lg:h-[480px] rounded-xl border-4 border-blue-600 flex flex-col items-center justify-between px-8 py-4 gap-y-4"
+                className="relative w-full lg:w-1/2 lg:mx-4 rounded-xl border-t-4 backdrop-blur-lg border-blue-600 flex flex-col items-center justify-between px-8 py-4 gap-y-2"
               >
-                <div className="rounded-full border-blue-600 border-4 w-20 h-20 grid place-items-center">
+                <div className="absolute -top-11 rounded-full border-blue-600 border-4 w-20 h-20 grid place-items-center">
                   <video.icon className="w-10 h-10 text-white" />
                 </div>
-                <h2 className="text-2xl font-bold text-center text-gradient">
+                <h2 className="mt-8 text-2xl font-bold text-center text-gradient">
                   {video.title}
                 </h2>
-                <p className="text-center text-md font-semibold">
+                <p style={{ textShadow: '1px 1px 3px #000' }} className="min-h-30 text-center text-md font-semibold">
                   {video.text}
                 </p>
               </div>
             ))}
           </div>
         </div>
-        <div className="bg-[url(/./new-bg-mirror.png)] w-full lg:w-1/2 h-screen lg:bg-none bg-cover bg-left bg-no-repeat">
-          <div className="overlay h-screen lg:bg-none flex flex-col lg:flex-row items-center gap-y-8 px-6 lg:px-0 py-6 lg:py-0">
+        <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="bg-[url(/./new-bg-2.avif)] w-full lg:w-1/2 h-screen lg:bg-none bg-cover bg-left bg-no-repeat">
+          <div className="overlay h-screen lg:bg-none flex flex-col items-center justify-center gap-y-12 px-6 lg:px-0 py-6 lg:py-0 mb-12">
             {videoCards2.map((video, i) => (
               <div
                 key={i}
-                className="w-full lg:w-1/2 lg:mx-4 lg:h-[480px] rounded-xl border-4 border-blue-600 flex flex-col items-center justify-between px-8 py-4 gap-y-4"
+               className="relative w-full lg:w-1/2 lg:mx-4 rounded-xl border-t-4 backdrop-blur-lg border-blue-600 flex flex-col items-center justify-between px-8 py-4 gap-y-2"
               >
-                <div className="rounded-full border-blue-600 border-4 w-20 h-20 grid place-items-center">
+                <div className="absolute -top-11 backdrop-blur-2xl rounded-full border-blue-600 border-4 w-20 h-20 grid place-items-center">
                   <video.icon className="w-10 h-10 text-white" />
                 </div>
-                <h2 className="text-2xl font-bold text-center text-gradient">
+                <h2 className="mt-8 text-2xl font-bold text-center text-gradient">
                   {video.title}
                 </h2>
-                <p className="text-center text-md font-semibold">
+                <p style={{ textShadow: '1px 1px 3px #000' }}className="min-h-30 text-center text-md font-semibold">
                   {video.text}
                 </p>
               </div>
