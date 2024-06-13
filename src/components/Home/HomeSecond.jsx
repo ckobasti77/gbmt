@@ -34,7 +34,7 @@ const HomeSecond = () => {
             <img
               src="/./single-camera.avif"
               alt="camera"
-              className="video-stagger video-slika translate-y-32 opacity-0 w-4/6 lg:w-1/4 camera"
+              className="video-stagger video-slika translate-y-32 opacity-0 w-1/2 lg:w-1/4 camera"
             />
             <p style={{ textShadow: '1px 1px 7.5px #000' }} className="px-6 lg:px-48 text-lg text-justify my-12 video-stagger translate-y-32 opacity-0">
               Dobrodošli u{" "}
@@ -56,7 +56,7 @@ const HomeSecond = () => {
             <img
               src="/./bager.avif"
               alt="camera"
-              className="w-4/6 lg:w-1/4 iskopi-stagger iskopi-slika translate-y-32 opacity-0 bager"
+              className="w-1/2 lg:w-1/4 iskopi-stagger iskopi-slika translate-y-32 opacity-0 bager"
             />
             <p style={{ textShadow: '1px 1px 7.5px #000' }} className="px-6 lg:px-48 text-lg text-justify my-12 iskopi-stagger translate-y-32 opacity-0">
               Pored video nadzora, nudimo sve vrste iskopnih radova sa našom
