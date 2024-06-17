@@ -8,19 +8,20 @@ export const navLinks = [
   },
   {
     id: 2,
+    to: "/kontakt",
+    text: "Kontakt",
+  },
+  {
+    id: 3,
     to: "/video-nadzor",
     text: "Video nadzor",
   },
   {
-    id: 3,
+    id: 4,
     to: "/iskopi",
     text: "Iskopi",
   },
-  {
-    id: 4,
-    to: "/kontakt",
-    text: "Kontakt",
-  },
+  
 ];
 
 export const videoTestimonials = [
@@ -121,4 +122,20 @@ export const autoSwiperImages = [
     auto: "/./auto-left.avif",
     background: "/./auto-left-bg.avif"
   },
+]
+
+export const swiperImages = [
+  "/./swiper-1.avif",
+  "/./swiper-2.avif",
+  "/./swiper-3.avif",
+  "/./swiper-4.avif",
+  "/./swiper-5.avif",
+  "/./swiper-6.avif",
+  "/./swiper-7.avif",
+  "/./swiper-8.avif",
+  "/./swiper-9.avif",
+  "/./swiper-10.avif",
+  "/./swiper-11.avif",
+  "/./swiper-12.avif",
+  "/./swiper-13.avif",
 ]

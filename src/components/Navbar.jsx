@@ -42,7 +42,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <ul
+    <div
       className={`fixed top-0 w-full py-6 px-6 lg:px-48 flex items-center justify-between text-lg z-[999999] transition-all lg:hover:backdrop-blur-lg ${
         showNav ? "transform-none " : "transform -translate-y-full"
       }`}
@@ -116,7 +116,7 @@ const Navbar = () => {
           <PhoneCallIcon />
         </a>
       </div>
-    </ul>
+    </div>
   );
 };
 

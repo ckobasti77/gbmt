@@ -51,6 +51,7 @@ const HomeFirst = () => {
             <a
               href="#sekcija-dva"
               className="scroll-to mt-5 opacity-0 translate-y-32 animate-bounce"
+              aria-label="Scroll to second section"
             >
               <ChevronDown className="h-12 w-12" />
               <ChevronDown className="h-12 w-12 -translate-y-9" />

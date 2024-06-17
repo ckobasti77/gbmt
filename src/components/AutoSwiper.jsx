@@ -4,36 +4,31 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 
-import { EffectCreative } from 'swiper/modules';
-import { autoSwiperImages } from "../constants/constants";
+import { Pagination, Navigation } from 'swiper/modules';
+import { autoSwiperImages, swiperImages } from "../constants/constants";
 
 const AutoSwiper = () => {
   return (
     <>
       <Swiper
-        grabCursor={true}
-        effect={'creative'}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
         }}
-        modules={[EffectCreative]}
-        className="mySwiper"
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} 
+        className="mySwiper h-[75vh]"
       >
-        {autoSwiperImages.map((img, i) => (
-          <SwiperSlide key={img.auto}          >
-            <div className={`bg-[url(${img.background})] bg-no-repeat bg-center`}>
-              <div className="backdrop-blur-sm  h-full grid place-items-center">
-                <img src={img.auto} alt={img.auto} />
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
+          {swiperImages.map((img, i) => (
+            <SwiperSlide key={img}          >
+                <div className="h-full grid place-items-center">
+                  <img src={img} alt={img} className='rounded-xl border-t-4 border-blue-500' />
+                </div>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </>
   );
