@@ -47,15 +47,53 @@ const Navbar = () => {
         showNav ? "transform-none " : "transform -translate-y-full"
       }`}
     >
+      <a
+          href="tel:+381641234567"
+          className="link -translate-y-96 opacity-0 h-12 w-12 bg-green-600 rounded-full grid lg:hidden place-items-center text-white"
+        >
+          <PhoneCallIcon />
+        </a>
+      <div className="justify-start gap-x-6 hidden lg:flex">
+        {navLinks.slice(0,2).map((link) => (
+            <Link
+              onClick={() => {
+                setNavOpen(false);
+                scrollToTop();
+              }}
+              key={link.id}
+              to={link.to}
+              className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? "text-blue-500" : "text-white"}`}
+              style={{textShadow: currentPath === link.to ? "1px 1px 5px #000" : ''}}
+            >
+              {link.text}
+            </Link>
+          ))}
+      </div>
       <Link
         to="/"
-        className="link text-5xl -translate-y-96 opacity-0 cursor-pointer font-bold tracking-widest text-blue-500"
+        className="link text-5xl -translate-y-96 opacity-0 cursor-pointer font-bold tracking-widest text-blue-500 drop-shadow-2xl"
       >
-        GBMT
+        <img src="/./logo-mix.avif" alt="logo" width={150} />
       </Link>
+      <div className="justify-end gap-x-6 hidden lg:flex">
+        {navLinks.slice(2,4).map((link) => (
+            <Link
+              onClick={() => {
+                setNavOpen(false);
+                scrollToTop();
+              }}
+              key={link.id}
+              to={link.to}
+              className={`link z-50 -translate-y-96 opacity-0 cursor-pointer ${currentPath === link.to ? "text-blue-500" : "text-white"}`}
+              style={{textShadow: currentPath === link.to ? "1px 1px 10px #000" : ''}}
+            >
+              {link.text}
+            </Link>
+          ))}
+      </div>
       <Burger navOpen={navOpen} toggleNav={toggleNav} />
       <div
-        className={`border-b-4 border-blue-500 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl  lg:rounded-b-none backdrop-blur-lg lg:backdrop-blur-none lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${navOpen ? "top-20" : "-top-96"} transition-all left-0 right-0 gap-y-8`}
+        className={`lg:hidden border-b-4 border-blue-500 lg:border-none py-8 lg:py-0 z-[9999999] rounded-b-xl  lg:rounded-b-none backdrop-blur-lg lg:backdrop-blur-none lg:bg-none flex flex-col lg:flex-row items-center gap-x-8 fixed lg:static ${navOpen ? "top-20" : "-top-96"} transition-all left-0 right-0 gap-y-8`}
       >
         {navLinks.map((link) => (
           <Link
@@ -73,7 +111,7 @@ const Navbar = () => {
         ))}
         <a
           href="tel:+381641234567"
-          className="link -translate-y-96 opacity-0 h-12 w-12 bg-green-600 rounded-full grid place-items-center text-white"
+          className="link -translate-y-96 opacity-0 h-12 w-12 bg-green-600 rounded-full grid lg:hidden place-items-center text-white"
         >
           <PhoneCallIcon />
         </a>

@@ -103,3 +103,22 @@ export const videoCards2 = [
     text: 'Naši sistemi se lako integrišu sa postojećom sigurnosnom infrastrukturom, poboljšavajući ukupnu sigurnost i funkcionalnost objekta.',
   },
 ]
+
+export const autoSwiperImages = [
+  {
+    auto: "/./auto-front.avif",
+    background: "/./auto-front-bg.avif"
+  },
+  {
+    auto: "/./auto-right.avif",
+    background: "/./auto-right-bg.avif"
+  },
+  {
+    auto: "/./auto-back.avif",
+    background: "/./auto-back-bg.avif"
+  },
+  {
+    auto: "/./auto-left.avif",
+    background: "/./auto-left-bg.avif"
+  },
+]

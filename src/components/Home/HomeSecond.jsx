@@ -32,7 +32,7 @@ const HomeSecond = () => {
               Video nadzor
             </h2>
             <img
-              src="/./single-camera.avif"
+              src="/./single-camera2.avif"
               alt="camera"
               className="video-stagger video-slika translate-y-32 opacity-0 w-1/2 lg:w-1/4 camera"
             />

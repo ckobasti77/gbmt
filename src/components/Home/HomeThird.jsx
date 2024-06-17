@@ -30,7 +30,7 @@ const HomeThird = () => {
   return (
     <div className="w-screen bg-[url(/./new-bg-2.avif)] bg-no-repeat bg-left lg:bg-top bg-cover overflow-hidden text-white">
       <div className="overlay min-h-screen pb-12">
-        <h2 className="text-gradient hidden lg:block home-3-title text-3xl text-center font-semibold pb-8 translate-y-32 opacity-0">
+        <h2 className="text-gradient hidden lg:block home-3-title text-3xl text-center font-semibold py-8 translate-y-32 opacity-0">
           Recenzije
         </h2>
         <div className="flex flex-col lg:flex-row items-center justify-between">
@@ -63,7 +63,7 @@ const HomeThird = () => {
             </div>
           </div>
           <div style={{ backgroundPosition: window.innerWidth < 1024 && '22.5% 50%' }} className="bg-[url(/./new-bg-2.avif)] bg-no-repeat bg-cover bg-left lg:bg-none flex flex-col items-center gap-y-16 w-full h-screen">
-            <div className="overlay lg:bg-none flex flex-col items-center justify-between gap-y-16 py-36 lg:py-12 h-full">
+            <div className="overlay lg:bg-none flex flex-col items-center justify-between gap-y-12 py-12 h-full">
               {iskopiTestimonials.map((single) => (
                 <div
                   key={single.name}

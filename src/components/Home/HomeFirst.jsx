@@ -42,7 +42,7 @@ const HomeFirst = () => {
             pouzdanu zaštitu.
           </h3>
           {/* <img
-            src="/./single-camera-1.png"
+            src="/./single-camera2-1.png"
             alt="camera"
             className="absolute w-2/6 right-0 top-[440px] block lg:hidden overflow-hidden"
           /> */}

@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import HomeFirst from "../components/Home/HomeFirst";
 import HomeSecond from "../components/Home/HomeSecond";
 import HomeThird from "../components/Home/HomeThird";
+import { Helmet } from "react-helmet";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -37,11 +38,22 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
-      <HomeFirst />
-      <HomeSecond />
-      <HomeThird />
-    </div>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Dobrodošli u Global Beo Mobil Trend - Lider u Video Nadzoru i Iskopnim Radovima</title>
+        <meta
+          name="description"
+          content="Global Beo Mobil Trend pruža vrhunske usluge ugradnje video nadzora i iskopnih radova. Otkrijte zašto smo vodeći u industriji sa našim profesionalnim i pouzdanim rešenjima."
+        />
+        <link rel="canonical" href="https://gbmt.rs/početna" />
+      </Helmet>
+      <div className="overflow-x-hidden">
+        <HomeFirst />
+        <HomeSecond />
+        <HomeThird />
+      </div>
+    </>
   );
 };
 
