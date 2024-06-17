@@ -3,6 +3,8 @@ import { PhoneCallIcon } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Helmet } from "react-helmet";
+import emailjs from '@emailjs/browser';
+import toast from "react-hot-toast";
 
 const Kontakt = () => {
   const formRef = useRef(null);
@@ -15,8 +17,6 @@ const Kontakt = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setCurrentAnimation("hit");
-
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -25,34 +25,22 @@ const Kontakt = () => {
           from_name: form.name,
           to_name: "Jovan",
           from_email: form.name,
-          to_email: "jovanm028@gmail.com",
+          to_email: "office@gbmt.rs",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         setIsLoading(false);
-        showAlert({
-          show: true,
-          text: "Message sent successfully!",
-          type: "success",
-        });
+        toast.success("Poruka uspešno poslata")
 
         setTimeout(() => {
-          hideAlert();
-          setCurrentAnimation("idle");
           setForm({ name: "", email: "", message: "" });
         }, [3000]);
       })
       .catch((error) => {
-        setIsLoading(false);
-        setCurrentAnimation("idle");
         console.log(error);
-        showAlert({
-          show: true,
-          text: "I didnt receive your message",
-          type: "danger",
-        });
+        toast.error("Poruka nije poslata. Pokušajte ponovo.")
       });
   };
 
@@ -69,7 +57,8 @@ const Kontakt = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Kontaktirajte nas za Video Nadzor i Iskopne Radove - Global Beo Mobil Trend
+          Kontaktirajte nas za Video Nadzor i Iskopne Radove - Global Beo Mobil
+          Trend
         </title>
         <meta
           name="description"
@@ -87,13 +76,14 @@ const Kontakt = () => {
           </h1>
           <div className="w-full h-full flex flex-col items-center justify-center lg:flex-row gap-x-8 px-6 lg:px-48 mt-12">
             <form
-              onSubmit={handleSubmit}
-              action=""
+              // onSubmit={handleSubmit}
+              action="https://formsubmit.co/office@gbmt.rs"
+              method="POST"
               className="flex flex-col gap-y-8 w-full lg:w-1/2"
             >
               <div className="flex flex-col">
                 <label
-                  htmlFor="name"
+                  htmlFor="Ime"
                   className="font-bold kontakt-stagger opacity-0 translate-y-32"
                 >
                   Vaše Ime:
@@ -103,8 +93,8 @@ const Kontakt = () => {
                   value={form.name}
                   onChange={handleChange}
                   type="text"
-                  name="name"
-                  id="name"
+                  name="Ime"
+                  id="Ime"
                   style={{
                     transition: "border-radius transform .3s ease-in-out",
                   }}
@@ -113,7 +103,7 @@ const Kontakt = () => {
               </div>
               <div className="flex flex-col">
                 <label
-                  htmlFor="email"
+                  htmlFor="Email:"
                   className="font-bold kontakt-stagger opacity-0 translate-y-32"
                 >
                   Vaš Email:
@@ -123,8 +113,8 @@ const Kontakt = () => {
                   value={form.email}
                   onChange={handleChange}
                   type="email"
-                  name="email"
-                  id="email"
+                  name="Email:"
+                  id="Email:"
                   style={{
                     transition: "border-radius transform .3s ease-in-out",
                   }}
@@ -133,7 +123,7 @@ const Kontakt = () => {
               </div>
               <div className="flex flex-col">
                 <label
-                  htmlFor="message"
+                  htmlFor="Poruka"
                   className="mb-1 font-bold flex items-center kontakt-stagger opacity-0 translate-y-32"
                 >
                   Poruka (ili nas odmah pozovite{" "}
@@ -150,8 +140,8 @@ const Kontakt = () => {
                   value={form.message}
                   onChange={handleChange}
                   type="text"
-                  name="message"
-                  id="poruka"
+                  name="Poruka"
+                  id="Poruka"
                   style={{ transition: "border-radius .3s ease-in-out" }}
                   className="focus:-skew-x-0 backdrop-blur-2xl bg-transparent px-4 border-[#1E3E81] border-t-2 border-l-2 rounded-tl-xl rounded-br-xl focus:rounded-tl-none focus:rounded-tr-xl focus:rounded-br-none focus:rounded-bl-xl focus:outline-none kontakt-stagger opacity-0 translate-y-32 rounded-2xl"
                   rows={5}

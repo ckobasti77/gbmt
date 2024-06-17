@@ -25,7 +25,7 @@ const AutoSwiper = () => {
           {swiperImages.map((img, i) => (
             <SwiperSlide key={img}          >
                 <div className="h-full grid place-items-center">
-                  <img src={img} alt={img} className='rounded-xl border-t-4 h-[75vh] border-blue-500 object-contain' />
+                  <img src={img} alt={img} className='rounded-xl border-t-4 max-h-[75vh] border-blue-500 object-contain' />
                 </div>
             </SwiperSlide>
           ))}
