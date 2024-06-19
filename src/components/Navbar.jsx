@@ -48,7 +48,7 @@ const Navbar = () => {
       }`}
     >
       <a
-          href="tel:+381641234567"
+          href="tel:+381621793800"
           className="link -translate-y-96 opacity-0 h-12 w-12 bg-green-600 rounded-full grid lg:hidden place-items-center text-white"
         >
           <PhoneCallIcon />
@@ -110,7 +110,7 @@ const Navbar = () => {
           </Link>
         ))}
         <a
-          href="tel:+381641234567"
+          href="tel:+381621793800"
           className="link -translate-y-96 opacity-0 h-12 w-12 bg-green-600 rounded-full grid lg:hidden place-items-center text-white"
         >
           <PhoneCallIcon />

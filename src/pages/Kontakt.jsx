@@ -128,7 +128,7 @@ const Kontakt = () => {
                 >
                   Poruka (ili nas odmah pozovite{" "}
                   <a
-                    href="tel:+381641234567"
+                    href="tel:+381621793800"
                     className="h-8 w-8 mx-1 bg-green-600 rounded-full inline-grid place-items-center text-white"
                   >
                     <PhoneCallIcon className="w-4 h-4" />
