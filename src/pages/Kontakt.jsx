@@ -90,8 +90,8 @@ const Kontakt = () => {
                 </label>
                 <input
                   required
-                  value={form.name}
-                  onChange={handleChange}
+                  // value={form.name}
+                  // onChange={handleChange}
                   type="text"
                   name="Ime"
                   id="Ime"
@@ -110,8 +110,8 @@ const Kontakt = () => {
                 </label>
                 <input
                   required
-                  value={form.email}
-                  onChange={handleChange}
+                  // value={form.email}
+                  // onChange={handleChange}
                   type="email"
                   name="Email:"
                   id="Email:"
@@ -137,8 +137,8 @@ const Kontakt = () => {
                 </label>
                 <textarea
                   required
-                  value={form.message}
-                  onChange={handleChange}
+                  // value={form.message}
+                  // onChange={handleChange}
                   type="text"
                   name="Poruka"
                   id="Poruka"
